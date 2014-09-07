@@ -24,6 +24,7 @@
 		E4315B1A19BCAD850057C1EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4315B1819BCAD850057C1EC /* InfoPlist.strings */; };
 		E4315B1C19BCAD850057C1EC /* AFALiYunOSSManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4315B1B19BCAD850057C1EC /* AFALiYunOSSManagerTests.m */; };
 		E4315B2619BCB1B60057C1EC /* oss.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4315B2519BCB1B60057C1EC /* oss.plist */; };
+		E505FD87E5CEEE1F504B880A /* AFALiYunOSSRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = E505F8BE76677C7D42B8011D /* AFALiYunOSSRequestSerializer.m */; };
 		E505FEF9F7A9AA8C72D79C22 /* AFALiYunOSSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E505FBF38262BF3751EEFE22 /* AFALiYunOSSManager.m */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +63,9 @@
 		E4315B1B19BCAD850057C1EC /* AFALiYunOSSManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFALiYunOSSManagerTests.m; sourceTree = "<group>"; };
 		E4315B2519BCB1B60057C1EC /* oss.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = oss.plist; sourceTree = "<group>"; };
 		E505F1678281E3E0CB4AC290 /* AFALiYunOSSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFALiYunOSSManager.h; sourceTree = "<group>"; };
+		E505F8BE76677C7D42B8011D /* AFALiYunOSSRequestSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFALiYunOSSRequestSerializer.m; sourceTree = "<group>"; };
 		E505FBF38262BF3751EEFE22 /* AFALiYunOSSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFALiYunOSSManager.m; sourceTree = "<group>"; };
+		E505FCD5F651A426A29A8493 /* AFALiYunOSSRequestSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFALiYunOSSRequestSerializer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				E4315B0819BCAD850057C1EC /* Images.xcassets */,
 				E4315AF419BCAD850057C1EC /* Supporting Files */,
 				E4315B2519BCB1B60057C1EC /* oss.plist */,
+				E505FCD5F651A426A29A8493 /* AFALiYunOSSRequestSerializer.h */,
+				E505F8BE76677C7D42B8011D /* AFALiYunOSSRequestSerializer.m */,
 			);
 			path = AFALiYunOSSManager;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				E4315AFE19BCAD850057C1EC /* AppDelegate.m in Sources */,
 				E4315AFA19BCAD850057C1EC /* main.m in Sources */,
 				E505FEF9F7A9AA8C72D79C22 /* AFALiYunOSSManager.m in Sources */,
+				E505FD87E5CEEE1F504B880A /* AFALiYunOSSRequestSerializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +452,7 @@
 				GCC_PREFIX_HEADER = "AFALiYunOSSManager/AFALiYunOSSManager-Prefix.pch";
 				INFOPLIST_FILE = "AFALiYunOSSManager/AFALiYunOSSManager-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -460,6 +467,7 @@
 				GCC_PREFIX_HEADER = "AFALiYunOSSManager/AFALiYunOSSManager-Prefix.pch";
 				INFOPLIST_FILE = "AFALiYunOSSManager/AFALiYunOSSManager-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

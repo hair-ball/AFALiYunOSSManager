@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AFALiYunOSSManager.h"
+#import "AFALiYunOSSRequestSerializer.h"
 
 @implementation AppDelegate
 
@@ -18,9 +19,20 @@
     NSDictionary *config = [NSDictionary dictionaryWithContentsOfFile:configPath];
     NSLog(@"config : %@", config);
 
+    AFALiYunOSSManager *manager = [[AFALiYunOSSManager alloc] initWithAccessKey:[config valueForKey:@"accessKey"]
+                                                                      AccessSec:[config valueForKey:@"accessSec"]];
+    manager.requestSerializer.region = @"oss.aliyuncs.com";
+    manager.requestSerializer.bucket = @"boxfish-assets";
 
-    AFALiYunOSSManager *manager = [[AFALiYunOSSManager alloc] init];
-//    AFALiYunOSSManager* manager = [AFALiYunOSSManager all]
+    NSLog(@"manager:%@", manager);
+    [manager getBucketsWithSuccess:^(id responseObject) {
+                NSLog(@"success");
+
+            }
+                           failure:^(NSError *error) {
+                               NSLog(@"error:%@", error);
+                           }
+    ];
 
     return YES;
 }
