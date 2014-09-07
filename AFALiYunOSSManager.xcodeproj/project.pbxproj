@@ -23,6 +23,8 @@
 		E4315B1219BCAD850057C1EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4315AF119BCAD850057C1EC /* UIKit.framework */; };
 		E4315B1A19BCAD850057C1EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4315B1819BCAD850057C1EC /* InfoPlist.strings */; };
 		E4315B1C19BCAD850057C1EC /* AFALiYunOSSManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E4315B1B19BCAD850057C1EC /* AFALiYunOSSManagerTests.m */; };
+		E4315B2619BCB1B60057C1EC /* oss.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4315B2519BCB1B60057C1EC /* oss.plist */; };
+		E505FEF9F7A9AA8C72D79C22 /* AFALiYunOSSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E505FBF38262BF3751EEFE22 /* AFALiYunOSSManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,9 @@
 		E4315B1719BCAD850057C1EC /* AFALiYunOSSManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AFALiYunOSSManagerTests-Info.plist"; sourceTree = "<group>"; };
 		E4315B1919BCAD850057C1EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E4315B1B19BCAD850057C1EC /* AFALiYunOSSManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFALiYunOSSManagerTests.m; sourceTree = "<group>"; };
+		E4315B2519BCB1B60057C1EC /* oss.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = oss.plist; sourceTree = "<group>"; };
+		E505F1678281E3E0CB4AC290 /* AFALiYunOSSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFALiYunOSSManager.h; sourceTree = "<group>"; };
+		E505FBF38262BF3751EEFE22 /* AFALiYunOSSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFALiYunOSSManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +125,8 @@
 		E4315AF319BCAD850057C1EC /* AFALiYunOSSManager */ = {
 			isa = PBXGroup;
 			children = (
+				E505FBF38262BF3751EEFE22 /* AFALiYunOSSManager.m */,
+				E505F1678281E3E0CB4AC290 /* AFALiYunOSSManager.h */,
 				E4315AFC19BCAD850057C1EC /* AppDelegate.h */,
 				E4315AFD19BCAD850057C1EC /* AppDelegate.m */,
 				E4315AFF19BCAD850057C1EC /* Main_iPhone.storyboard */,
@@ -128,6 +135,7 @@
 				E4315B0619BCAD850057C1EC /* ViewController.m */,
 				E4315B0819BCAD850057C1EC /* Images.xcassets */,
 				E4315AF419BCAD850057C1EC /* Supporting Files */,
+				E4315B2519BCB1B60057C1EC /* oss.plist */,
 			);
 			path = AFALiYunOSSManager;
 			sourceTree = "<group>";
@@ -240,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4315B0419BCAD850057C1EC /* Main_iPad.storyboard in Resources */,
+				E4315B2619BCB1B60057C1EC /* oss.plist in Resources */,
 				E4315B0919BCAD850057C1EC /* Images.xcassets in Resources */,
 				E4315B0119BCAD850057C1EC /* Main_iPhone.storyboard in Resources */,
 				E4315AF819BCAD850057C1EC /* InfoPlist.strings in Resources */,
@@ -297,6 +306,7 @@
 				E4315B0719BCAD850057C1EC /* ViewController.m in Sources */,
 				E4315AFE19BCAD850057C1EC /* AppDelegate.m in Sources */,
 				E4315AFA19BCAD850057C1EC /* main.m in Sources */,
+				E505FEF9F7A9AA8C72D79C22 /* AFALiYunOSSManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

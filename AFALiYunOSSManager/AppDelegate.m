@@ -7,11 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import "AFALiYunOSSManager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    NSString *configPath = [[NSBundle mainBundle] pathForResource:@"oss" ofType:@"plist"];
+    NSDictionary *config = [NSDictionary dictionaryWithContentsOfFile:configPath];
+    NSLog(@"config : %@", config);
+
+
+    AFALiYunOSSManager *manager = [[AFALiYunOSSManager alloc] init];
+//    AFALiYunOSSManager* manager = [AFALiYunOSSManager all]
+
     return YES;
 }
 
