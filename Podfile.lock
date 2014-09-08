@@ -18,11 +18,14 @@ PODS:
   - AFNetworking/UIKit (2.2.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - XMLReader-Arc (1.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.2.3)
+  - XMLReader-Arc (~> 1.1)
 
 SPEC CHECKSUMS:
   AFNetworking: ae513199cca79e9d7af2708ccabe2ed075550c42
+  XMLReader-Arc: ded6911a53903396872d6b6356efd7b982ead69d
 
 COCOAPODS: 0.33.1

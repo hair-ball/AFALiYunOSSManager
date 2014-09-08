@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AFALiYunOSSManager.h"
-#import "AFALiYunOSSRequestSerializer.h"
+
 
 @implementation AppDelegate
 
@@ -19,20 +19,55 @@
     NSDictionary *config = [NSDictionary dictionaryWithContentsOfFile:configPath];
     NSLog(@"config : %@", config);
 
+    NSString *bucket = @"afnetworking";
+
     AFALiYunOSSManager *manager = [[AFALiYunOSSManager alloc] initWithAccessKey:[config valueForKey:@"accessKey"]
                                                                       AccessSec:[config valueForKey:@"accessSec"]];
-    manager.requestSerializer.region = @"oss.aliyuncs.com";
-    manager.requestSerializer.bucket = @"boxfish-assets";
+    [manager setRegion:@"oss.aliyuncs.com"];
+//    [manager setBucket:bucket];
 
     NSLog(@"manager:%@", manager);
-    [manager getBucketsWithSuccess:^(id responseObject) {
-                NSLog(@"success");
 
-            }
-                           failure:^(NSError *error) {
-                               NSLog(@"error:%@", error);
-                           }
-    ];
+//    [manager putBucket:bucket
+//            parameters:nil
+//               success:^(id responseObject) {
+//                   NSLog(@"success\n%@", [responseObject text]);
+//               }
+//               failure:^(NSError *error) {
+//                   NSLog(@"error:%@", error);
+//               }
+//    ];
+//
+//    [manager getBucket:bucket
+//               success:^(id responseObject) {
+//                   NSLog(@"success\n%@", [responseObject text]);
+//               }
+//               failure:^(NSError *error) {
+//                   NSLog(@"error:%@", error);
+//               }
+//    ];
+//
+//    [manager getBucketsWithSuccess:^(id responseObject) {
+//                NSLog(@"success\n%@", [responseObject text]);
+//            }
+//                           failure:^(NSError *error) {
+//                               NSLog(@"error:%@", error);
+//                           }
+//    ];
+
+//    [manager deleteBucket:bucket
+//                  success:^(id responseObject) {
+//                      NSLog(@"success\n%@", [responseObject text]);
+//                  }
+//                  failure:^(NSError *error) {
+//                      NSLog(@"error:%@", error);
+//                  }
+//    ];
+
+
+//    manager
+
+
 
     return YES;
 }
@@ -57,6 +92,10 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)parserDidStartDocument:(NSXMLParser *)parser {
+    NSLog(@"start");
 }
 
 @end

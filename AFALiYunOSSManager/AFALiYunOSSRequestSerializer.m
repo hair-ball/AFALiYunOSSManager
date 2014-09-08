@@ -114,9 +114,9 @@ static NSString *AFBase64EncodedStringFromData(NSData *data) {
 - (NSURLRequest *)requestBySerializingRequest:(NSURLRequest *)request withParameters:(id)parameters error:(NSError *__autoreleasing *)error {
     NSMutableURLRequest *mutableRequest = [request mutableCopy];
 
-    NSLog(@"!!!");
-    NSLog(@"%@,%@", self.accessKey, self.accessSec);
-    NSLog(@"bucket -> %@", self.bucket);
+//    if ([parameters isKindOfClass:[NSDictionary class]]) {
+//        NSLog(@"%@", [parameters valueForKey:@"p"]);
+//    }
 
     if (self.accessKey && self.accessSec) {
         NSMutableDictionary *mutableHeaderFields = [NSMutableDictionary dictionary];
@@ -138,7 +138,6 @@ static NSString *AFBase64EncodedStringFromData(NSData *data) {
 
 
         NSString *canonicalizedResource = [NSString stringWithFormat:@"%@%@", (self.bucket) ? self.bucket : @"", request.URL.path];
-        NSLog(@"%@", canonicalizedResource);
         NSString *method = [request HTTPMethod];
         NSString *contentMD5 = [request valueForHTTPHeaderField:@"Content-MD5"];
         NSString *contentType = [request valueForHTTPHeaderField:@"Content-Type"];
@@ -149,8 +148,8 @@ static NSString *AFBase64EncodedStringFromData(NSData *data) {
         [mutableString appendFormat:@"%@\n", (contentMD5) ? contentMD5 : @""];
         [mutableString appendFormat:@"%@\n", (contentType) ? contentType : @""];
         [mutableString appendFormat:@"%@\n", (date) ? date : @""];
-        [mutableString appendFormat:@"%@\n", mutableCanonicalizedHeaderString];
-        [mutableString appendFormat:@"%@\n", canonicalizedResource];
+        [mutableString appendFormat:@"%@", mutableCanonicalizedHeaderString];
+        [mutableString appendFormat:@"%@", canonicalizedResource];
         NSData *hmac = AFHMACSHA1EncodedDataFromStringWithKey(mutableString, self.accessSec);
         NSString *signature = AFBase64EncodedStringFromData(hmac);
 
